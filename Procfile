@@ -1,0 +1,1 @@
+web: gunicorn gestaodeclientes.wsgi --log-file -
