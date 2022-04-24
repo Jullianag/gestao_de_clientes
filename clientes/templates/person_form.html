@@ -1,24 +1,32 @@
-<!doctype html>
-<html lang="pt">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>       <! -- POTS é usado para enviar coisas novas ao servidor, enctype para fazer upload dos arquivos -- >
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+
+{% block title %} Formulário {% endblock %}
+
+{% block main %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+
+    </div>
+    <div class="col-6">
+       <! -- POTS é usado para enviar coisas novas ao servidor, enctype para fazer upload dos arquivos -- >
     <form  method="POST" enctype="multipart/form-data">
 
         {% csrf_token %}
-        {{ form.as_p }}
+        {% bootstrap_form form %}
 
 
         <! -- submit pega o que esta no form e manda para o servidor -- >
-        <button type="submit">Salvar</button>
-
-
+        <button type="submit" class="btn btn-info">Salvar</button>
     </form>
+    </div>
+    <div class="col">
 
-</body>
-</html>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

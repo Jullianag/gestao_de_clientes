@@ -42,8 +42,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'collectfast',
     'django.contrib.staticfiles',
+    'bootstrap5',
     'clientes.apps.ClientesConfig',
     'home.apps.HomeConfig',
+
 ]
 
 MIDDLEWARE = [
