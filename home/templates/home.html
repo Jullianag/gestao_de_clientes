@@ -5,11 +5,8 @@
 {% block main %}
 
  <div class="row">
-        <div class="col">
-
-        </div>
-        <div class="col">
-             <h2>Seja bem vindo</h2>
+        <div class="col-6">
+   <h2>Seja bem vindo</h2>
           {% if user.is_authenticated %}
                 <p>Olá {{ user.username }}</p>
                 <br>
@@ -23,6 +20,9 @@
                 <a href="{% url 'login' %}" class="btn btn-info">Entrar</a>
 
             {% endif %}
+        </div>
+        <div class="col">
+
         </div>
 
         <div class="col">

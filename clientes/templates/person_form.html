@@ -7,11 +7,8 @@
 
 <div class="container">
   <div class="row">
-    <div class="col">
-
-    </div>
     <div class="col-6">
-       <! -- POTS é usado para enviar coisas novas ao servidor, enctype para fazer upload dos arquivos -- >
+    <! -- POTS é usado para enviar coisas novas ao servidor, enctype para fazer upload dos arquivos -- >
     <form  method="POST" enctype="multipart/form-data">
 
         {% csrf_token %}
@@ -21,6 +18,9 @@
         <! -- submit pega o que esta no form e manda para o servidor -- >
         <button type="submit" class="btn btn-info">Salvar</button>
     </form>
+    </div>
+    <div class="col-">
+
     </div>
     <div class="col">
 
